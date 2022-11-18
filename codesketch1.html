@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style type="text/css">
+	.pumpkins{
+		width: 100px;
+		height: 100px;
+		background-image: url(https://lightlysketched.com/wp-content/uploads/2022/07/IMG-1890-1024x791.png);
+		display: inline-block;
+		background-size: contain;
+		background-repeat: no-repeat;
+		transition: 0.5s;
+	}
+
+
+	.pumpkins:hover{
+		transformation:rotate(360deg);
+		background-image: url(./pumpkin.png);
+		/*THIS DOESN'T SHOW UP*/
+	}
+
+
+
+	</style>
+
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+
+function makePumpkin (){
+	var patch = document.createElement("div");
+	document.body.appendChild(patch);
+	patch.classList.add("pumpkins");
+}
+
+setInterval(
+		makePumpkin, 100
+		)
+	</script>
+
+	<div id="background"></div>
+
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style type="text/css">
+		#photo{
+			height:400px;
+			width:500px;
+			background-image:url(https://www.witf.io/wp-content/uploads/2020/12/PNUT01_IMA_EPI_13-672x490.png);
+			background-size:contain;
+			background-repeat:no-repeat;
+		}
+
+		#spacer{
+				height: 50px;
+				width:200px;
+		}
+
+		#panic{
+			height: 200px;
+			width:200px;
+			background-color:red;
+		} 
+
+
+	</style>
+
+
+
+	
+</head>
+<body>
+
+	<center>
+		<div id="photo"></div>
+	</center>
+
+	<center>
+		<div id="spacer"></div>
+	</center>
+
+	<center>
+		<div id="panic"></div>
+	</center>
+
+
+	<audio id="song"></audio>
+
+	<center>
+		<p> ^ use this button when you panic! </p>
+	</center>
+
+
+
+	<script type = "text/javascript">
+
+		var clickCounter = 0;
+
+		photo.addEventListener("click",
+			function(){
+			clickCounter=clickCounter+1
+
+			if (clickCounter==1) {
+				console.log(clickCounter);
+				photo.style.backgroundImage="url('https://parade.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTkwNTc5MDEzMjEzNjkzMDUz/a-charlie-brown-christmas-snoopy-ftr.jpg')";
+				song.src = "song1.mp3";
+				song.play();
+			}
+
+			if (clickCounter==2) {
+				console.log(clickCounter);
+				photo.style.backgroundImage="url('https://www.wate.com/wp-content/uploads/sites/42/2021/12/GettyImages-112799183.jpg?strip=1')"
+				song.src = "song2.mp3";
+				song.play();
+			}
+			if (clickCounter==3) {
+				console.log(clickCounter);
+				photo.style.backgroundImage="url('https://i.ytimg.com/vi/bPhqMJpQsYQ/hqdefault.jpg')"
+				song.src = "song3.mp3";
+				song.play();
+
+			}
+
+			if (clickCounter==4) {
+				console.log(clickCounter);
+				photo.style.backgroundImage="url('charliebrown1.jpeg')";
+				clickCounter=0
+				song.src = "song4.mp3";
+				song.play();
+			}
+
+
+		})
+
+		panic.addEventListener("click",
+			function () {
+			song.pause();
+
+		})
+
+	
+
+
+
+	</script>
+
+</body>
+</html>
