@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style type="text/css">
+
+	#box{
+		width:500px;
+		height:500px;
+		border: 3px solid mediumseagreen;
+		position:relative;
+		left:20%;
+	}
+
+	p{
+		position:relative;
+		left:30%;
+
+	}
+
+	</style>
+</head>
+<body>
+	
+		<p> click on the box to choose a salad!</p>
+	
+		<div id = "box"></div>
+
+	<script type="text/javascript">
+		var salads = ["caesar", "goat cheese", "avocado", "caprese", "greek", "cobb", "arugula", "watermelon"]
+
+		box.addEventListener("click", function(){
+
+			var charlotte = Math.round(Math.random()*7);
+
+				box.innerText = salads[charlotte]
+
+
+			})
+
+		var pastas = ["carbonara", "amatriciana", "red gnocci", "prosciutto and peas", ]
+
+
+	</script>
+
+</body>
+</html>

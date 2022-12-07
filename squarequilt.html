@@ -25,6 +25,11 @@
 
         }
 
+        #square1: hover{
+            background-color:white;
+
+        }
+
 
     </style>
 </head>
@@ -35,11 +40,15 @@
 
 <center><p> <!-- If you'd like a description, feel free to put in your description here! Add your styling above in the curly brackets after "p" above --> some photos i took of my views of new york city: <p></center>
 
+<center>
+    <div id="container"></div>
+</center>
+
 
 
 <script type="text/javascript">
 
-        alert("welcome to my square quilt! i took all of these photos on my phone when i though i was looking at something really peaceful or beautiful. it's not totally done, but i plan to add more details and functions when i have time.");
+        alert("welcome to my square quilt! i took all of these photos on my phone. it's not totally done, but i plan to add more details and functions when i have time.");
     console.log("hello mesage");
 
 //For all of your media, to use this, label each file  with numbers (eg.1.jpg, 2.jpg) and keep them in the same folder as this html file. If they are not jpgs, change the extension "jpg" in the recipe below (line 25) to whatever file type they are.  
@@ -49,26 +58,86 @@
     function makeSquare (x) {
 
             var square = document.createElement('div');
-                        document.body.appendChild(square);
+                        container.appendChild(square);
             square.style.width = "250px";
-            square.style.height = "250px";
+            square.style.height = "200px";
+            square.style.paddingTop="50px";
             square.style.display = "inline-block";
             square.style.margin = "10px";
             square.style.backgroundRepeat = "no-repeat";
             square.style.border = "1px";
             square.style.backgroundColor = "purple";
+            square.style.fontSize = "12px";
+            square.style.fontFamily = "times";
+            square.style.position= "relative"
 
             square.style.backgroundImage = "url(" + x + ".jpg)";
             square.style.backgroundSize = "contain"
 
-            square.style.backgroundPositionY = "center"
-            square.style.backgroundPositionX = "center"
+            square.style.backgroundPositionY = "center";
+            square.style.backgroundPositionX = "center";
+            var textDiv = document.createElement('div');
+            square.appendChild(textDiv);
+            textDiv.style.position="absolute";
+            textDiv.style.width ="200px";
+            textDiv.style.height="200px"
+            textDiv.style.left="25px";
+
+            square.addEventListener("mouseenter", function(){
+                square.style.backgroundImage="url()";
+                square.style.backgroundColor="white";
+                // square.style.paddingTop = "40px"
+                // square.style.paddingLeft = "40px"
+
+                if(square.id=="square0")
+                    {textDiv.innerHTML="this is a picture i took when i was running around the reservoir during indoor track."}
+                if(square.id=="square1")
+                    {textDiv.innerHTML="i took this when my plane just got back to new york and i had been away for a while and i was so happy to be home."}
+                if(square.id=="square2")
+                    {textDiv.innerHTML="i took this picture when i was visiting the met, and i looked down the street and it just looked like a really pretty scene."}
+                if(square.id=="square3")
+                    {textDiv.innerHTML="this is a picture i took on the way to the armory. my friends and i looked out the window and saw that there was a really pretty sunset over the hudson."}
+                if(square.id=="square4")
+                    {textDiv.innerHTML="i took this at one of my last dalton soccer practices on randall's before the end of the season, when it was starting to get dark early and we could see the sunset."}
+                if(square.id=="square5")
+                    {textDiv.innerHTML="this is from one of the mornings this year that i woke up super early to study or finish an assignment and it was totally dark out with no cars or anyone."}
+                if (square.id=="square6")
+                    {textDiv.innerHTML="this is from chelsea piers, when i went for a bat mitzvah or something and the sunset was really pretty down there."}
+                if (square.id=="square7")
+                    {textDiv.innerHTML="this is a picture out of the dining room window when there was just an incredible sunset."}
+                if (square.id=="square8")
+                    {textDiv.innerHTML="this is another sunset from my block, but i had to stop in the middle of 96th street to take it after i saw some random lady doing the same and thought it was a good idea."}
+                if (square.id=="square9")
+                    {textDiv.innerHTML="i took this when i went to pretend i was in gossip girl and sit on the stairs by the met and it looked super pretty with the sunset. this was definitely not tourist behavior."}
+                if (square.id=="square10")
+                    {textDiv.innerHTML="this one is from when i was walking home from the gym and it was pouring rain, and i stopped under the scaffolding for a second."}
+                if (square.id=="square11")
+                    {textDiv.innerHTML="this is from when my bio class took a field trip into central park and it was finally starting to look like fall outside."}
+                if (square.id=="square12")
+                    {textDiv.innerHTML="this is driving back from randsall's after a late soccer practice and it was back when the sun hadn't already set that early."}
+
+
+                if (square.id=="square13")
+                    {textDiv.innerHTML="i took this when i was on the way to an early saturday moring soccer practice and the sun was still really low and pretty."}
+
+
+
+                if (square.id=="square14")
+                    {textDiv.innerHTML="i took this when i was juggling in central park and everyone was just relaxing and the sunset was really pretty with a bunch of planes flying across."}
+                })
+
+               square.addEventListener("mouseout", function(){
+                square.style.backgroundImage="url(" + x + ".jpg)";
+                square.style.backgroundColor="";
+                textDiv.innerText=""
+
+            })
+  
   
 
 
             square.id = "square" + x;};
 
-//Below, is the for loop in which where the squares are actually made. This for loop is where the function above is actually called. It is called 14 times, (between the values of 0 and 15) and because the variable i is declared in the for loop and is then being passed to the makeSquare recipe, each time the function runs, i changes in value (+1). Thus, the attributes that involve the i change in value as well (eg. the id attribute changes to be whatever i was last time, plus 1.)//
 
     for (var i = 0; i < 15; i++) 
     { makeSquare(i);}
