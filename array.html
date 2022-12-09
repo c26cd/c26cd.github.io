@@ -4,42 +4,102 @@
 
 	<style type="text/css">
 
-	#box{
-		width:500px;
-		height:500px;
+	#box1{
+		width:200px;
+		height:20px;
 		border: 3px solid mediumseagreen;
 		position:relative;
-		left:20%;
 	}
 
-	p{
+	#box2{
+		width:200px;
+		height:20px;
+		border:3px solid plum;
 		position:relative;
-		left:30%;
 
 	}
+
+	#box3{
+		width:200px;
+		height:20px;
+		border:3px solid lightblue;
+		position:relative;
+
+	}
+
+	#box4{
+		width:200px;
+		height:20px;
+		border:3px solid lightpink;
+		position:relative;
+
+		}
+
+	.spacer{
+		height:3px;
+		width:100px;
+		color:white;
+	}
+	
+
 
 	</style>
 </head>
 <body>
+		<center>
+			<p> click on the boxes to choose a meal!</p>
+		
 	
-		<p> click on the box to choose a salad!</p>
-	
-		<div id = "box"></div>
+		<div id = "box1"></div>
+		<div class = "spacer"></div>
+		<div id = "box2"></div>
+		<div class = "spacer"></div>
+		<div id = "box3"></div>
+		<div class = "spacer"></div>
+		<div id = "box4"></div>
+
+		</center>
 
 	<script type="text/javascript">
-		var salads = ["caesar", "goat cheese", "avocado", "caprese", "greek", "cobb", "arugula", "watermelon"]
+		var salads = ["salad: caesar", "salad: goat cheese", "salad: avocado", "salad: caprese", "salad: greek", "salad: cobb", "salad: arugula", "salad: watermelon"]
 
-		box.addEventListener("click", function(){
+		box1.addEventListener("click", function(){
 
-			var charlotte = Math.round(Math.random()*7);
+			var math1 = Math.round(Math.random()*7);
 
-				box.innerText = salads[charlotte]
+				box1.innerText = salads[math1]
 
 
 			})
 
-		var pastas = ["carbonara", "amatriciana", "red gnocci", "prosciutto and peas", ]
+		var pastas = ["pasta: carbonara", "pasta: amatriciana", "pasta: red gnocci", "pasta: prosciutto and peas", "pasta: penne alla vodka", "pasta: cacio e pepe"]
 
+		box2.addEventListener("click", function(){
+
+			var math2 = Math.round(Math.random()*5)
+
+				box2.innerText = pastas[math2]
+		})
+
+		var cookies = ["cookie: pistachio and jam", "cookie: peanut butter", "cookie: chocolate chip", "cookie: caramel", "cookie: sugar", "cookie: snickerdoodle"]
+
+		box3.addEventListener("click", function(){
+
+			var math3 = Math.round(Math.random()*5)
+
+				box3.innerText = cookies[math3] 
+
+				// something about this isn't working
+		})
+
+		var drinks = ["drink: lemonade", "drink: iced tea", "drink: arnold palmer", "drink: san pellegrino", "drink: sparkling water", "drink: ice water", "drink: coke"]
+
+		box4.addEventListener("click", function(){
+
+			var math4 = Math.round(Math.random()*6)
+
+			box4.innerText = drinks[math4]
+		})
 
 	</script>
 
