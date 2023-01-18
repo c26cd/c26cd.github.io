@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>go back to studying!</title>
+
+	<style type="text/css">
+		#characters{
+
+			width:50%;
+			height:250px;
+			border: 3px solid magenta;
+			position:relative;
+		}
+		#info{
+
+			width:50%;
+			height:250px;
+			border: 3px solid lightgreen;
+			position:relative;
+		}
+
+		#spacer{
+
+			width:100%;
+			height:20px;
+
+		}
+	</style>
+
+
+</head>
+
+<body>
+
+	<center>
+	<div id = "characters"></div>
+	<div id = "spacer"></div>
+	<div id = "info"></div>
+	</center>
+
+
+
+<script type ="text/javascript">
+
+	  alert("this is supposed to be a study guide, but it doesn't really work, so i'm going to try and figure it.");
+    console.log("hello mesage");
+
+	
+	var character = ["mr. darcy", "elizabeth", "jane", "mr. collins", "mrs. and mr. bennet", "lydia and kitty", "mary", "mr. bingley", "georgiana darcy", "mr. wickham"]
+
+	character.addEventListener("click", function(){
+	var math1 = Math.round(Math.random()*10);
+
+	character.innerText = characters[math1]
+
+	})
+</script>
+
+</body>
+
+</html>

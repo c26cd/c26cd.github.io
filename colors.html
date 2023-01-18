@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style type="text/css">
+		body{
+
+			background-color:rgb(160,120,140);
+		}
+
+	#coordinates{
+		height:100px;
+		width:100px;
+		opacity:0.5;
+		background-color:white;
+		color:black;
+		font-family:times;
+		font-size:15px;
+
+	}
+
+	</style>
+	
+</head>
+<body>
+
+	<div id = "coordinates"></div>
+
+	<script type="text/javascript">
+		
+		document.addEventListener("mousemove",
+			function(event){
+			console.log(event.clientX, event.clientY);
+			coordinates.innerText=event.clientX + ", " + event.clientY;
+
+
+			document.body.style.backgroundColor = "rgb(" + event.clientY/3 + ", 0, " + event.clientX/3 + ")"
+
+			})
+	</script>
+
+</body>
+</html>
