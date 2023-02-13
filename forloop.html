@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		.bagels{
+			width:150px;
+			height:150px;
+			background-image: url(https://bellyfull.net/wp-content/uploads/2022/03/Easy-Bagel-Recipe-blog-6-500x500.jpg);
+			display:inline-block;
+			margin:3px;
+			border-radius:50%;
+			background-size:contain;
+
+		}
+
+	</style>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		//goal is to make 1000 bagels. to do that, we're going to make a function that makes one bagel and then runs that function 1000 times.
+
+		//make a div, put it in the body, and style it.
+
+		function makeBagels (){
+			var bagel = document.createElement("div");
+			document.body.appendChild(bagel);
+			bagel.classList.add("bagels");
+		}
+
+		for(var i=1; i<1001; i=i+1){
+			makeBagels(i)}
+
+	</script>
+
+</body>
+</html>
