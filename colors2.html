@@ -10,6 +10,7 @@
 			position:absolute;
 			top:40%;
 			left:5%;
+			border-radius:20%;
 		}
 		#square2{
 			height: 100px;
@@ -17,7 +18,8 @@
 			background-color: black;
 			left:21%;
 			position:absolute;
-			top:80%
+			top:80%;
+			border-radius:20%;
 		}
 		#square3{
 			height: 100px;
@@ -26,6 +28,7 @@
 			position:absolute;
 			left:37%;
 			top:10%;
+			border-radius:20%;
 		}
 		#square4{
 			height: 100px;
@@ -34,6 +37,7 @@
 			left:53%;
 			position:absolute;	
 			top:50%;
+			border-radius:20%;
 		}
 		#square5{
 			height: 100px;
@@ -42,7 +46,7 @@
 			position:absolute;
 			left:69%;
 			top:30%;
-
+			border-radius:20%;
 		}
 		#square6{
 			height: 100px;
@@ -51,6 +55,66 @@
 			position:absolute;
 			left:85%;
 			top:70%;
+			border-radius:20%;
+		}
+
+		#pink{
+			height:100%;
+			width:17%;
+			background-color:black;
+			position:absolute;
+			z-index:-1;
+			transition:2s;
+		}
+
+		#orange{
+			height:100%;
+			width:17%;
+			left:17%;
+			background-color:black;
+			position:absolute;
+			z-index:-1;
+			transition:2s;
+		}
+
+		#yellow{
+			height:100%;
+			width:17%;
+			left:34%;
+			background-color:black;
+			position:absolute;
+			z-index:-1;
+			transition:2s;
+		}
+
+		#green{
+			height:100%;
+			width:17%;
+			left:51%;
+			background-color:black;
+			position:absolute;
+			z-index:-1;
+			transition:2s;
+		}
+
+		#blue{
+			height:100%;
+			width:17%;
+			left:68%;
+			background-color:black;
+			position:absolute;
+			z-index:-1;
+			transition:2s;
+		}
+
+		#purple{
+			height:100%;
+			width:17%;
+			left:85%;
+			background-color:black;
+			position:absolute;
+			z-index:-1;
+			transition:2s;
 		}
 
 		body{
@@ -68,59 +132,87 @@
 	<div id="square4"></div>
 	<div id="square5"></div>
 	<div id="square6"></div>
+	<div id="pink"></div>
+	<div id="orange"></div>
+	<div id="yellow"></div>
+	<div id="green"></div>
+	<div id="blue"></div>
+	<div id="purple"></div>
 
 	<script type="text/javascript">
+
+		var a;
+		var b;
+		var c;
+		var d;
+		var e;
+		var f;
+		var g;
 
 		alert("search across the screen to find the rainbow!");
     console.log("instructional mesage");
 
-    	var i = 1
+    	 a = 1
+		console.log(a)
 
 	square1.addEventListener("mouseenter", function(){
 		square1.style.backgroundColor="pink";
 
-		var i = i+1
+		   b = 1
+		 console.log(b)
 
 		})
 
 	square2.addEventListener("mouseenter", function(){
 		square2.style.backgroundColor="lightcoral";
 
-		var i = i+1
-
+		  c = 1
+		 console.log(c)
 		})
 
 	square3.addEventListener("mouseenter", function(){
 		square3.style.backgroundColor="lightgoldenrodyellow";
 
-		var i = i+1
+		 d = 1
+		 console.log(d)
 		})
 
 	square4.addEventListener("mouseenter", function(){
 		square4.style.backgroundColor="lightgreen";
 
-		var i = i+1
+		  e = 1
+		 console.log(e)
 
 		})
 
 	square5.addEventListener("mouseenter", function(){
 		square5.style.backgroundColor="lightblue";
 
-		var i = i+1
+		  f = 1
+		 console.log(f)
 
 		})
 
 	square6.addEventListener("mouseenter", function(){
 		square6.style.backgroundColor="lavender";
 
-		var i = i+1
-
-	// im kind of confused about what the problem is and how to fix it so i will ask
+		  g = 1
+		 console.log(g)
 	})
 
-	for(i=6){
-		
+	document.addEventListener("mousemove", function(){
+		if(a==1 && b==1 && c==1 && d==1 && e==1 && f==1 && g==1){
+		pink.style.backgroundColor="pink";
+		orange.style.backgroundColor="lightcoral";
+		yellow.style.backgroundColor="lightgoldenrodyellow";
+		green.style.backgroundColor="lightgreen";
+		blue.style.backgroundColor="lightblue";
+		purple.style.backgroundColor="lavender";
 	}
+
+	})
+	
+	
 	
 	</script>
 
