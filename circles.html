@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>circles</title>
+
+	<style type="text/css">
+		.circle{
+			width:30px;
+			height:30px;
+			background-color:white;
+			border-radius:50%;
+			position:absolute;
+			transition:.15s;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id = "circle"></div>
+
+	<script type="text/javascript">
+
+		var colors = ["pink", "lightpink", "hotpink", "deeppink", "palevioletred", "mediumvioletred"]
+		
+		function makeCircle(){
+
+			var circle = 
+			document.createElement('div');
+			document.body.appendChild(circle)
+			circle.classList.add('circle')
+
+			document.addEventListener("mousemove", function(event){
+				console.log(event.clientX, event.clientY)
+
+				var math1 = Math.round(Math.random()*6)
+				var math2 = Math.random()*30
+
+			circle.style.left = event.clientX+Math.random()*200+"px";
+			circle.style.top = event.clientY+Math.random()*200+"px";
+			circle.style.backgroundColor = colors[math1]
+			})
+
+			circle.style.height = "math2" + "px";
+			circle.style.width = "math2" + "px";
+			circle.style.borderRadius = Math.random()*80 + "px"
+		}
+
+		for (var i=0; i<20; i++){makeCircle()}
+
+
+
+
+	</script>
+
+</body>
+</html>
+
+<!-- - make div, style to make it a circle
+- add an event listener that tracks where the mouse is
+- set that to be the top and left values -->
