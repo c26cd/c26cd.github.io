@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>final project!</title>
+
+	<style>
+		#vase{
+			background-image: url(vase.png);
+			height: 250px;
+			width: 600px;
+			position: absolute;
+			top:550px;
+			left:50%;
+			background-repeat: no-repeat;
+			z-index:10;
+		}
+
+
+		#blue{
+			background-color:rgb(202, 221, 239);
+			height:150px;
+			width:150px;
+			top:45px;
+			left:50px;
+			position:absolute;
+		}
+
+		#pink{
+			background-color:rgb(235, 200, 221);
+			height:150px;
+			width:150px;
+			top:235px;
+			left:50px;
+			position:absolute;
+		}
+
+		#yellow{
+			background-color:rgb(249, 237, 207);
+			height:150px;
+			width:150px;
+			top:425px;
+			left:50px;
+			position:absolute;
+		}
+
+		#green{
+			background-color:rgb(206, 227, 222);
+			height:150px;
+			width:150px;
+			top:615px;
+			left:50px;
+			position:absolute;
+		}
+
+		.flower{
+			width:200px;
+			height:500px;
+			background-position:centered;
+			background-size:contain;
+			background-repeat: no-repeat;
+			position: absolute;
+		}
+
+		#button1{
+			width:500px;
+			height:700px;
+/*			background-color:red;*/
+			left:700px;
+			position:absolute;
+			z-index: 20;
+		}
+
+		#button2{
+			background-color:rgb(217,205,237);
+			top:45px;
+			left:245px;
+			height:150px;
+			width:150px;
+			position:absolute;
+			color:white;
+			font-size:50px;
+			z-index:30;
+		}
+		
+	</style>
+</head>
+<body>
+
+	<div id = "vase"></div>
+
+	<div id = "blue"></div>
+	<div id = "pink"></div>
+	<div id = "yellow"></div>
+	<div id = "green"></div>
+
+	<div id = "button1"></div>
+	<div id = "button2"><center><p>undo</p></center></div>
+
+	<script type="text/javascript">
+
+// this is where I make the variables that I can refer to outside of all the functions//
+		var id;
+		var flower;
+
+		// this is the function that makes the flowers and styles them//
+
+		function makeBlueFlower(){
+			 flower = document.createElement("div")
+			document.body.appendChild(flower)
+			flower.classList.add("flower");
+
+			var number = Math.round(Math.random()*3)
+
+			flower.style.backgroundImage = "url(./final/blue"+ number+".png)"
+
+			 id = "blue"+number;
+
+			flower.id = id;
+
+		}
+
+		//this is where the flowers are actually created and added to the document and repeats for the different colors of flowers//
+
+		function makePinkFlower(){
+			flower = document.createElement("div")
+			document.body.appendChild(flower)
+			flower.classList.add("flower");
+
+			var number = Math.round(Math.random()*3)
+
+			//this picks what the flower will look like//
+
+			flower.style.backgroundImage = "url(./final/pink"+ number+".png)"
+
+			 id = "pink"+number;
+
+			flower.id = id;
+		}
+
+		function makeYellowFlower(){
+			flower = document.createElement("div")
+			document.body.appendChild(flower)
+			flower.classList.add("flower");
+
+			var number = Math.round(Math.random()*3)
+
+			flower.style.backgroundImage = "url(./final/yellow"+ number+".png)"
+
+			 id = "yellow"+number;
+
+			flower.id = id;
+		}
+
+		function makeGreenFlower(){
+
+			flower = document.createElement("div")
+			document.body.appendChild(flower)
+			flower.classList.add("flower");
+
+			var number = Math.round(Math.random()*3)
+
+			flower.style.backgroundImage = "url(./final/green"+ number+".png)"
+
+			 id = "green"+number;
+
+			flower.id = id;
+		}
+
+		//this adds the event listener to all of the squares so that the flowers will start following the mouse//
+
+		blue.addEventListener("click", function(){
+			makeBlueFlower()
+		flower.style.opacity="1"
+
+			document.addEventListener("mousemove", move);
+
+		})
+
+		pink.addEventListener("click", function(){
+			makePinkFlower()
+						flower.style.opacity="1"
+
+			document.addEventListener("mousemove", move);
+		})
+
+		yellow.addEventListener("click", function(){
+			makeYellowFlower()
+						flower.style.opacity="1"
+
+			document.addEventListener("mousemove", move);
+		})
+
+		green.addEventListener("click", function(){
+			flower.style.opacity="1"
+			makeGreenFlower()
+			document.addEventListener("mousemove", move);
+		})
+
+		function move (event){
+				flower.style.left = event.clientX +"px";
+				flower.style.top = event.clientY +"px";
+			}
+
+			//this makes it so that, when you click on the vase/box, the flower stops following the mouse//
+
+		button1.addEventListener("click", function(){
+			console.log('hello?')
+
+			document.removeEventListener("mousemove", move)
+		})
+
+		button2.addEventListener("click", function(){
+			console.log('hi!')
+			flower.style.opacity = "0";
+		})
+
+
+
+	</script>
+
+</body>
+</html>

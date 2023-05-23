@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>final presentation</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white-contrast.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<style type="text/css"> 
+
+			#example1{
+				background-image: url(example1.png);
+				background-size:contain;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<!-- <section 
+				data-background-image = "../square.png"data-background-size="contain">
+					
+					<p id="one">hello! welcome to my final project.</p>
+				</section> -->
+
+				<section data-background-size="contain">
+					<p id="s">hello! welcome to my final project.</p>
+				</section>
+				<section data-background-size="contain">
+					
+					<p id="two">i decided to make a new project that would be fun for spring, so i made a vase and bouquet that you could design yourself.</p>
+				</section>
+
+				<section><p>the first thing i did was use procreate to draw a bunch of flowers on an ipad, and then send those images as pngs to my computer.</p></section>
+
+				<!-- <section data-background-size = "contain" data-background-image = "../example.png"></section> -->
+
+				<section>
+					<div id = "example1" class="fragment-fade-out"
+					></div>
+				</section>
+
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
